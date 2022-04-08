@@ -63,7 +63,7 @@ nuget spec
 # 生成 .nupkg 文件
 
 ```shell
-nuget pack Weick.Orm.Core.csproj --configuration Release
+nuget pack Weick.Orm.Core.csproj -Prop Configuration=Release
 ```
 
 
@@ -93,4 +93,5 @@ dotnet nuget push Weick.Orm.Core.1.0.0.nupkg --api-key xxx --source https://api.
 `nuspec` 官网：https://docs.microsoft.com/zh-cn/nuget/what-is-nuget
 
 `nuspec `文件描述：https://docs.microsoft.com/zh-cn/nuget/reference/nuspec
+
 `nuget package` 文件目录：https://docs.microsoft.com/zh-cn/nuget/create-packages/creating-a-package#from-a-convention-based-working-directory

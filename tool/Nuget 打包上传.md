@@ -78,6 +78,16 @@ dotnet nuget push Weick.Orm.Core.1.0.0.nupkg --api-key xxx --source https://api.
 
 
 
+# 删除包
+
+```shell
+dotnet nuget delete MiniShop.Platform.Model 1.0.0 --source https://api.nuget.org/v3/index.json --api-key xxx
+```
+
+删除包需要 key 拥有 Unlist package 的 Scopes 才行，删除后还存在 nuget 服务器上！！！只是改了状态而已，不能被拉取，也不能再推送同包名同版本的包！！！推送下一版本的包就会将之前版本删除的包移除了（不懂是不是删除后要过一段时间才被移除？）
+
+
+
 # 查看上传的包
 
 进入 `nuget` 官网，在  `Manage Packages` 里查看上传的包

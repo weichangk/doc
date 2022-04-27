@@ -88,6 +88,40 @@ RESTful api 范例
 
 
 
+# Http 状态码
+
+![1650203212065](RESTfulApi/1650203212065.png)
+
+
+
+![1650203265860](RESTfulApi/1650203265860.png)
+
+
+
+
+
+# 内容协商
+
+允许客户端和服务器通过协商来决定相互之间的数据传输格式
+
+![1650203641436](RESTfulApi/1650203641436.png)
+
+
+
+添加支持 xml 格式
+
+```
+services.AddControllers( setupAction =>{
+	setupAction.RespectBrowserAcceptHeader = true;
+}).AddXmlDataContractSerializerFormatters();
+```
+
+
+
+
+
+
+
 # 向 api 传入参数
 
 ![1649775928964](RESTfulApi/1649775928964.png)
@@ -98,7 +132,29 @@ RESTful api 范例
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 # 封装资源过滤器
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -130,9 +186,7 @@ webapi 是基于 asp.net core mvc 框架的，mvc 框架不仅可以创建 api �
 
 
 
-**mvc 架构的数据流动图**
 
-![1649690963874](RESTfulApi/1649690963874.png)
 
 
 

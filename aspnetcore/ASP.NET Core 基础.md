@@ -8,7 +8,7 @@ https://docs.microsoft.com/zh-cn/aspnet/core/introduction-to-aspnet-core?view=as
 
 
 
-Asp.Net Core 亮点特性
+**Asp.Net Core 亮点特性**
 
 ![1649850450745](ASP.NET Core 基础/1649850450745-1649850502046.png)
 
@@ -32,7 +32,7 @@ Asp.Net Core 亮点特性
 
 
 
-# 创建 Asp.Net Core Mvc 项目
+创建 Asp.Net Core Mvc 项目来了解 ASP.NET Core 基础代码
 
 ```shell
 dotnet new mvc -lang c# -o StudentManagement --framework NET5.0 
@@ -41,33 +41,17 @@ dotnet build
 dotnet run
 ```
 
-**ASP.NET Core MVC 概述**
-
-ASP.NET Core MVC 是使用“模型-视图-控制器”设计模式构建 Web 应用和 API 的丰富框架。
-
-https://docs.microsoft.com/zh-cn/aspnet/core/mvc/overview?view=aspnetcore-5.0
-
-![1649944962470](ASP.NET Core 基础/1649944962470.png)
-
-
-
-![1649945460120](ASP.NET Core 基础/1649945460120.png)
-
-
-
-MVC 工作流程
-
-![1649945153500](ASP.NET Core 基础/1649945153500.png)
-
 
 
 
 
 # ASP.NET Core 基础
 
+https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/?view=aspnetcore-5.0&tabs=windows
+
 https://www.cnblogs.com/zh7791/category/1936344.html
 
-**Main 方法**
+# Main 方法
 
 ```c#
     public class Program
@@ -90,7 +74,7 @@ Main() 方法是应用程序的入口点，配置 Asp.Net Core 应用并启动�
 
 https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-5.0
 
-**启动类 Startup**
+# 启动类 Startup
 
 在设置主机时，还使用 IWebHostBuilder 类的 UseStartup() 扩展方法配置启动类。启动类有两种方法
 
@@ -101,7 +85,7 @@ https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/startup?view=aspnetcor
 
 
 
-**托管模型**
+# 托管模型
 
 - 在项目文件中使用 AspNetCoreHostingModel 指定应用托管形式
 
@@ -126,7 +110,7 @@ https://www.cnblogs.com/zh7791/p/14505997.html
 
 
 
-**配置**
+# 配置
 
 若要在 Startup 类中使用配置信息，需要使用ASP.NET Core框架提供的IConfiguration服务。
 因此，只需要通过Startup类的构造函数注入IConfiguration服务后通过IConfiguration对象[xxx]访问即可。
@@ -135,7 +119,7 @@ https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/configuration/?view=as
 
 
 
-**请求处理管道**
+# 请求处理管道
 
 ASP.NET Core 请求管道包含一系列请求委托，依次调用。每个中间件组件都可以在使用next方法调用下一个组件之前和之后执行一些操作。 中间件组件还可以决定不调用下一个中间件组件，这称为短路请求管道。
 asp.net核心中的中间件组件可以访问传入请求和传出响应。
@@ -145,7 +129,7 @@ asp.net核心中的中间件组件可以访问传入请求和传出响应。
 
 
 
-**中间件**
+# 中间件
 
 ASP.NET Core应用程序中的每个中间件组件都执行以下任务。
 
